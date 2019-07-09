@@ -12,7 +12,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 app.get("/", (req, res) => res.send("We're here, logging stuff."));
 
-// curl -d "message=test" -X POST http://localhost:3000/
+// Test with: curl -d "message=test" -X POST http://localhost:3000/
 app.post("/", (req, res) => {
   if (req.body.message) {
     const now = new Date();
